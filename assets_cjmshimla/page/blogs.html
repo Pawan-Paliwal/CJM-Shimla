@@ -1,0 +1,1532 @@
+<!DOCTYPE html>
+
+
+
+<html dir="ltr" lang="en">
+
+
+
+
+<!-- Mirrored from www.mrachd.com/page/blogs by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jan 2025 11:43:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+
+
+  <link rel="shortcut icon" type="image/jpg" href="../assets/layout/images/faviconmra.png">
+
+
+
+
+
+
+
+  <!-- Meta Tags -->
+
+
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+
+
+
+
+
+
+  <title>
+
+
+
+
+
+
+
+    Best CBSE School in Chandigarh
+
+
+
+
+
+
+  </title>
+
+
+
+
+
+
+
+  <meta name="description" content="M.R.A Modern Public School is best CBSE school in Chandigarh, Chandi Mandir and Manimajra. Our students achieve success in all areas of life and are a source of pride for us." />
+
+
+
+
+
+
+
+  <meta name="keywords" content="Best school in Chandigarh, Best CBSE school in Chandigarh, Top school in Chandigarh" />
+
+
+
+
+
+
+
+  <meta name="robots" content="index, follow">
+
+
+
+
+
+
+
+  <link rel="canonical" href="../index.html" />
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Stylesheet -->
+
+
+
+
+
+
+
+  <link href="../assets/layout/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+  <link href="../assets/layout/css/lity.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+  <link href="../assets/layout/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+
+  <link href="../assets/layout/css/animate.css" rel="stylesheet" type="text/css">
+
+
+  <!-- CSS | Main style file -->
+
+
+
+  <link href="../assets/layout/css/style-main592e.css?ver=3" rel="stylesheet" type="text/css">
+
+  <link href="../assets/layout/fonts/algerian-regular/AlgerianRegular.ttf" rel="stylesheet" type="text/css">
+
+  <link href="../assets/layout/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+  <!-- CSS | Preloader Styles -->
+
+  <link href="../assets/layout/css/preloader.css" rel="stylesheet" type="text/css">
+
+  <!-- CSS | Custom Margin Padding Collection -->
+
+  <link href="../assets/layout/css/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+
+  <!-- CSS | Responsive media queries -->
+
+  <link href="../assets/layout/css/responsive0e7e.css?ver=7" rel="stylesheet" type="text/css">
+
+  <link href="../assets/layout/css/hover.css" rel="stylesheet" type="text/css">
+
+<!-- Include Swiper CSS /JS-->
+<link rel="stylesheet" href="../../unpkg.com/swiper%4011.2.1/swiper-bundle.min.css">
+<script src="../../unpkg.com/swiper%4011.2.1/swiper-bundle.min.js"></script>
+
+<script>
+  const apiKey = "AIzaSyAeQ1J_Ho_qJv6ddfLFBivVP4vO307mV6M";
+  const channelId = "UC0mn_LW6UAJsu7eBun32NSQ";
+
+  fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet&type=video&maxResults=50`)
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('video-container');
+      const totalResults = data.pageInfo.totalResults; // Total number of videos
+
+      // Iterate over the videos and create slides
+      data.items.forEach(item => {
+        const videoId = item.id.videoId;
+        const title = item.snippet.title;
+        const thumbnail = item.snippet.thumbnails.medium.url;
+
+        const videoSlide = `
+          <div class="swiper-slide">
+            <div class="video-item">
+              <h3>${title}</h3>
+              <div class="thumbnail-wrapper">
+                <img src="${thumbnail}" alt="${title}" class="thumbnail" data-video-id="${videoId}">
+                <button class="play-button" data-video-id="${videoId}">Play Here</button>
+              </div>
+            </div>
+          </div>
+        `;
+        container.innerHTML += videoSlide;
+      });
+
+      // Ensure no extra slides are shown if there are fewer videos than Swiper's loop setting
+      const swiperSlides = document.querySelectorAll('.swiper-slide');
+      if (swiperSlides.length > totalResults) {
+        swiperSlides.forEach((slide, index) => {
+          if (index >= totalResults) {
+            slide.remove();
+          }
+        });
+      }
+
+      // Initialize Swiper
+      new Swiper('.swiper-container', {
+        loop: false, // Disable loop to prevent showing non-existing slides
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        },
+      });
+
+      // Handle Play Button Click
+      document.addEventListener('click', function (e) {
+        if (e.target.classList.contains('play-button')) {
+          const videoId = e.target.dataset.videoId;
+          const thumbnailWrapper = e.target.parentElement;
+          thumbnailWrapper.innerHTML = `
+            <iframe width="100%" height="200" 
+              src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          `;
+        }
+      });
+    })
+    .catch(err => console.error('Error fetching YouTube API:', err));
+</script>
+ 
+
+
+ <script>
+        // Show popup on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const popup = document.getElementById('popup');
+            const overlay = document.getElementById('overlay');
+            const closeBtn = document.querySelector('.close-btn');
+
+            // Show the popup and overlay
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+
+            // Close the popup when the close button is clicked
+            closeBtn.addEventListener('click', function () {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            });
+
+            // Close the popup when overlay is clicked
+            overlay.addEventListener('click', function () {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            });
+        });
+    </script>
+
+
+ <style>
+        /* Popup styling */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background: #fff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border-radius: 8px;
+        }
+        #popup img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Light black background */
+            z-index: 999;
+        }
+        .close-btn {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .close-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body class="">
+
+
+<div id="overlay"></div>
+    <div id="popup">
+        <img src="../uploads/1733549131_mrabanner.jpg" alt="Popup Image">
+        <br>
+        <button class="close-btn">Close</button>
+    </div>
+
+
+
+
+  <div id="wrapper" class="clearfix">
+
+
+
+
+
+
+
+    <!--Header Section-->
+
+
+
+    <header id="header" class="header" style="user-select: auto">
+
+
+
+      <div class="header-nav" style="user-select: auto">
+
+
+
+        <div class="header-nav-wrapper navbar-scrolltofixed bg-orange" style="user-select: auto">
+
+
+
+          <div class="container" style="user-select: auto">
+
+
+
+            <div class="row logo-section-row" style="user-select: auto">
+
+
+
+              <div class="logo-section-mra" style="user-select: auto">
+
+
+
+                <a class="menuzord-brand pull-left flip sm-pull-center mb-3" href="../index.html" style="user-select: auto">
+
+
+
+                  <img src="../assets/images/moti-logo.png" alt="Mra School Logo" style="user-select: auto" />
+
+
+
+                  <p style="user-select: auto">
+
+
+
+                    <span class="big-logo" style="user-select: auto">Moti Ram Arya</span><br style="user-select: auto" />
+
+
+
+                    <span class="medium-logo" style="user-select: auto">Sr. Sec. Model School</span><br style="user-select: auto" />
+
+
+
+                    <span class="small-logo" style="user-select: auto">Sector 27-A, Chandigarh</span>
+
+
+
+                  </p>
+
+
+
+                </a>
+
+
+
+              </div>
+
+
+
+
+
+
+
+              <div class="navigation-mra" style="user-select: auto">
+
+
+
+                <div class="top_box flw hidden-md hidden-sm hidden-xs " style="user-select: auto">
+
+
+
+                  <ul class="under-list" style="user-select: auto">
+
+
+
+                    <li style="user-select: auto">
+                      <a class="Adm-button" target="blank" href="https://mrachd.cyberschoolmanager.com/Registration/mrachd/OnlineRegistration.aspx" style="user-select: auto">Student Registration</a>
+                   </li>
+                    <li style="user-select: auto">
+                      <a class="pay-button" href="https://onlinefee.cyberschoolmanager.com/mrachd/" target="_blank" style="user-select: auto">Pay Fee Online</a>
+                    </li>
+                    <ul class="under-list social-flex" style="user-select: auto">
+                      <li style="user-select: auto">
+                        <span class="phone" style="user-select: auto">
+                          <i class="fa fa-phone text-theme-colored2 mr-5" style="user-select: auto"></i> </span> 
+                           <a class="admission-call" target="blank" href="tel:01724186773" style="user-select: auto">+0172-4186773</a> 
+                      </li>
+                      <li style="user-select: auto">
+                        <span class="phone" style="user-select: auto">
+                          <i class="fa fa-envelope-o text-theme-colored2 mr-5" style="user-select: auto"></i></span> 
+                           <a class="admission-call" target="blank" href="mailto:mraschool@yahoo.com" style="user-select: auto">mraschool@yahoo.com</a>
+                      </li>
+
+
+
+                    </ul>
+
+                    <ul class="styled-icons icon-sm icon-bordered icon-circled clearfix  social_icn_fi">
+
+                     <li><a href="https://www.facebook.com/mraschd" target="_blank"><img src="../assets/images/facebook.png" alt="face" style="user-select: auto"></a></li>
+
+                     <li><a href="https://www.instagram.com/mrachd27?igshid=YzAwZjE1ZTI0Zg%3D%3D" target="_blank"><img src="../assets/images/instagram.png" alt="insta" style="user-select: auto"></a></li>
+
+                     <li><a href="https://www.youtube.com/@motiramaryasector27" target="_blank"><img src="../assets/images/youtube.png" alt="youtube" style="user-select: auto"></a></li>
+
+                   </ul>
+
+                   
+
+                 </ul>
+
+                
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <!-- navbar -->
+
+
+
+                <nav class="navbar navbar-default navbar-static-top">
+
+
+
+                  <div class="container-fluid">
+
+
+
+                    <div class="navbar-header">
+
+
+
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+
+
+
+                        <span class="sr-only">Toggle navigation</span>
+
+
+
+                        <span class="icon-bar"></span>
+
+
+
+                        <span class="icon-bar"></span>
+
+
+
+                        <span class="icon-bar"></span>
+
+
+
+                      </button>
+
+
+
+                    </div>
+
+
+
+                    <div id="navbar1" class="navbar-collapse collapse">
+
+                        
+
+                        <ul class="nav navbar-nav"> <li><a href="../index.html">Home</a></li><li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="vision-and-mission.html">Vision and Mission</a></li><li><a href="our-founder-president.html">Our Founder President</a></li><li><a href="our-president.html">Our President</a></li><li><a href="our-director.html">Our Director</a></li><li><a href="our-principal.html">Our Principal</a></li><li><a href="our-head-mistress.html">Our Head Mistress</a></li><li><a href="faculty.html">Faculty</a></li><li><a href="school-management-committee.html">School Management Committee</a></li></ul></li><li><a href="mandatory-public-disclosure.html">Mandatory Public Disclosure</a></li><li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Admission <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="information-procedure.html">Information & Procedure</a></li><li><a href="information-of-admissions-session-2024-25.html">Information of admissions session 2025-26</a></li><li><a href="fee-structure.html">Fee Structure</a></li></ul></li><li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Events & Happenings <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="welcome/gallery.html">Photo Gallery</a></li><li><a href="Gallery/mediacoverage.html">Media Coverage</a></li><li><a href="activities.html">Activities</a></li></ul></li><li><a href="blogs.html">Blogs</a></li><li><a href="contact.html">Contact Us</a></li></ul>
+                        
+
+                      <!--  <ul class="nav navbar-nav">-->
+
+
+
+                      <!--  <li class="active"><a href="https://www.mrachd.com/">Home</a></li>-->
+
+
+
+                      <!--<li class="dropdown">-->
+
+                      <!--     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>-->
+
+                      <!--     <ul class="dropdown-menu" role="menu">-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/a-brief-history-of-school">A Brief History of School</a></li>-->
+
+                      <!--         <li><a href="/page/vision-and-mission">Vision and Mission</a></li>-->
+
+                      <!--         <li><a href="/page/our-founder-president">Our Founder President</a></li>-->
+
+                      <!--         <li><a href="/page/our-president">Our President</a></li>-->
+
+                      <!--         <li><a href="/page/our-director">Our Director</a></li>-->
+
+                      <!--         <li><a href="/page/our-principal">Our Principal</a></li>-->
+
+                      <!--         <li><a href="/page/our-head-mistress">Our Head Mistress</a></li>-->
+
+                      <!--         <li><a href="/page/faculty">Faculty</a></li>-->
+
+                      <!--         <li><a href="/page/educators">Our Educators</a></li>-->
+
+                      <!--         <li><a href="/page/school-management-committee">School Management Committee</a></li>-->
+
+                      <!--     </ul>-->
+
+                      <!-- </li>-->
+
+                      <!-- <li><a href="https://www.mrachd.com/page/mandatory-public-disclosure">Mandatory Public Disclosure</a></li>-->
+
+                       
+
+                      <!-- <li class="dropdown">-->
+
+                      <!--     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admission <span class="caret"></span></a>-->
+
+                      <!--     <ul class="dropdown-menu" role="menu">-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/list-of-selected-students">List Of Selected Students</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/information-procedure">Information & Procedure</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/information-of-admissions-session-2023-24">Information of admissions session 2023-24</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/fee-structure">Fee Structure</a></li>-->
+
+                      <!--     </ul>-->
+
+                      <!-- </li>-->
+
+                       
+
+                      <!-- <li>-->
+
+                      <!--       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Events and Happenings <span class="caret"></span></a>-->
+
+                      <!--     <ul class="dropdown-menu" role="menu">-->
+
+                      <!--         <li><a href="https://www.mrachd.com/welcome/gallery">Photo Gallery</a></li>-->
+
+                               <!--<li><a href="https://www.mrachd.com/Gallery/videos">Video Gallery</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/Gallery/mediacoverage">Media's Coverage</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/activities">Activities</a></li>-->
+
+                               <!--<li><a href="#">Achievements</a></li>-->
+
+                      <!--     </ul>-->
+
+                      <!-- </li>-->
+
+                       
+
+                      <!-- <li><a href="https://www.mrachd.com/blogs">Blogs</a></li>-->
+
+                       
+
+                      <!-- <li><a href="https://www.mrachd.com/contact">Contact Us</a></li>-->
+
+                       
+
+                      <!-- </ul>-->
+
+
+
+                      
+
+
+
+                    </div>
+
+
+
+                    <!--/.nav-collapse -->
+
+
+
+                  </div>
+
+
+
+                  <!--/.container-fluid -->
+
+
+
+                </nav>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- ---Header Section close here  -->
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+  </header><section class="Blog direcsec">
+	<div class="container">
+	<h3 class="mt0"><span>Blogs</span></h3>
+		<div class="row">
+			<div class="col-lg-3 col-sm-4">
+				<div class="col-md-12 sidebar-head col-lg-12">
+					<div class="widget widget_categories">
+						<h2 class="widget-title">Latest Blog</h2>	
+						<div id="accordion">
+							<div class="card card-2">
+																											<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/27-cbse-heritage-quiz-competition-2023.html" class="card-link">CBSE HERITAGE QUIZ COMPETITION 2023</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/26-debate-competition.html" class="card-link">Debate Competition</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/25-skilled-gymnasts-secure-top-positions-in-championships.html" class="card-link">Skilled Gymnasts Secure Top Positions in Championships</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/22-buddha-purnima-and-labours-day-celebration-2023.html" class="card-link">Buddha Purnima and labour’s day celebration 2023</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/21-world-malaria-day-2023.html" class="card-link">World Malaria Day 2023</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/20-blood-donation.html" class="card-link">Blood Donation</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/18-orientation-programme-in-mra.html" class="card-link">Orientation Programme in MRA</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/17-save-soil.html" class="card-link">Save Soil</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/16-farewell-and-hawan-21-22.html" class="card-link">Farewell and hawan 21-22</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/15-nss-camp-report.html" class="card-link">NSS Camp Report</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/14-christmas-celebrations.html" class="card-link">Christmas Celebrations</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/13-childrens-day-celebration.html" class="card-link">Children’s Day Celebration</a>
+											</div>
+										</div>
+																			<div class="card card-2">
+											<div class="witr_ac_card">	
+												<a href="../blogs/details/10-gurupurab-celebration.html" class="card-link">Gurupurab Celebration</a>
+											</div>
+										</div>
+																								</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-9 col-sm-8 blogger">
+													<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1702535126_WhatsApp_Image_2023-12-14_at_11_48_23.jpg" data-lity=""><img src="../uploads/1702535126_WhatsApp_Image_2023-12-14_at_11_48_23.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 11 Dec 2023</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/27-cbse-heritage-quiz-competition-2023.html">CBSE HERITAGE QUIZ COMPETITION 2023</a></h2>
+									
+
+									<p>&nbsp;&lsquo;CBSE Heritage India Quiz 2023 &lsquo; was held at Moti Ram Arya School, Sector - 27, Chandigarh. The CBSE Heritage India Quiz is one of the programmes promoted by the CBSE with an aim to create awareness among students about the rich heritage and cultural diversity of our country.
+
+Th...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/27-cbse-heritage-quiz-competition-2023.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1701776522_debate01.jpg" data-lity=""><img src="../uploads/1701776522_debate01.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 27 May 2023</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/26-debate-competition.html">Debate Competition</a></h2>
+									
+
+									<p>The two-day MRAPDC, 2023 commenced on 27th and 28th May, 2023 in Moti Ram Arya Sr. Sec.Model School, Chandigarh . It was joint effort and in collaboration with The Informative Initiative company owned two self-driven and highly dedicated two boys, Mr. Pranav Joshi and Mr. Siddarth Sharma, students f...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/26-debate-competition.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1701776294_achievers.jpg" data-lity=""><img src="../uploads/1701776294_achievers.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 19 Aug 2023</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/25-skilled-gymnasts-secure-top-positions-in-championships.html">Skilled Gymnasts Secure Top Positions in Ch</a></h2>
+									
+
+									<p>Sports are known for producing the most remarkable athletes, colourful characters, influential leaders and memorable heroes.
+
+The enthusiastic sportspersons of Moti Ram Arya senior secondary Model school, Chandigarh outshined their opponents at various Inter school state tournaments organised by t...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/25-skilled-gymnasts-secure-top-positions-in-championships.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695289974_0e1b1a30-458f-4b44-b0ab-c7bda2a68a87.jpg" data-lity=""><img src="../uploads/1695289974_0e1b1a30-458f-4b44-b0ab-c7bda2a68a87.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 23 May 2023</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/22-buddha-purnima-and-labours-day-celebration-2023.html">Buddha Purnima and labour’s day celebrati</a></h2>
+									
+
+									<p>A special assembly on BUDDHA PURNIMA and LABOURS&rsquo; DAY was held by MRA model senior secondary school,sec 27 Chandigarh. It began with &lsquo; Gayatri Mantra&rsquo;. Students from senior classes expressed views regarding the life of Gautama Buddha and on importance of hard- work. A special dance...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/22-buddha-purnima-and-labours-day-celebration-2023.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695289411_1.jpg" data-lity=""><img src="../uploads/1695289411_1.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 21 Apr 2023</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/21-world-malaria-day-2023.html">World Malaria Day 2023</a></h2>
+									
+
+									<p>Moti Ram Arya Sr. Sec. Model School, Chandigarh hosts &quot;~An illuminating session to eradicate the root cause of Malaria.&quot;
+
+World Malaria Day is commemorated every year on 25th April in recognition of the global efforts to control malaria. Much in line with the aforementioned, Moti Ram Ary...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/21-world-malaria-day-2023.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695288418_bd1.jpg" data-lity=""><img src="../uploads/1695288418_bd1.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 19 Dec 2022</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/20-blood-donation.html">Blood Donation</a></h2>
+									
+
+									<p>Embrace the spirit of compassion and generosity as we come together for our school&#39;s blood donation camp. In these ten lines, we invite you to be a part of this noble endeavor:
+
+
+	Life flows in every drop of blood.
+	Our school stands for more than just academics; it stands for humanity.
+	Jo...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/20-blood-donation.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695288206_orientation-1024x461.jpg" data-lity=""><img src="../uploads/1695288206_orientation-1024x461.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 19 Sep 2022</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/18-orientation-programme-in-mra.html">Orientation Programme in MRA</a></h2>
+									
+
+									<p>The foundation for good parent teacher relationship is frequent and open communication, mutual respect and a clear understanding of what is best for an individual child. In pursuit of the same, MRA Sr. Sec. Model School, Sector 27A, Chandigarh organised an Orientation Programme for the students and ...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/18-orientation-programme-in-mra.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695288175_save-soil.jpg" data-lity=""><img src="../uploads/1695288175_save-soil.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 19 Sep 2022</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/17-save-soil.html">Save Soil</a></h2>
+									
+
+									<p>Moti Ram Arya School, Sector 27 Chandigarh, in collaboration with Isha Foundation organised the seminar on Save Soil movement. Dr Mona Chopra&nbsp; MBBS, MD&nbsp; ( Geriatrics) &nbsp;the guest speaker along with Isha Foundation volunteers talked about the movement. Save Soil movement was started in ...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/17-save-soil.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695288101_farewell.jpg" data-lity=""><img src="../uploads/1695288101_farewell.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 19 Sep 2022</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/16-farewell-and-hawan-21-22.html">Farewell and hawan 21-22</a></h2>
+									
+
+									<p>&nbsp; The management staff members and the students of Moti Ram Arya Senior Secondary Model School, Sector 27 Chandigarh, bid adieu to the students of class 12th at grand farewell function held in the school auditorium on 19th April 2022.
+
+&nbsp;The program started with a prayer followed by the t...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/16-farewell-and-hawan-21-22.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695282239_IMG-20211118-WA0123-1024x768.jpg" data-lity=""><img src="../uploads/1695282239_IMG-20211118-WA0123-1024x768.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 27 Dec 2021</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/15-nss-camp-report.html">NSS Camp Report</a></h2>
+									
+
+									<p>Moti Ram Arya Sr. Sec. School Sector 27 organized a seven day NSS camp in its premises w.e.f. 27 Dec. The camp&nbsp; was inaugurated by the School Principal Dr. Seema Biji and organized under the able guidance of the Programme Officer Mrs. Meenu Sood .
+
+The camp with its apt slogan of &ldquo;Not M...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/15-nss-camp-report.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695282081_fc05c75d-186c-4f7a-a9ca-6fa373d88d15.jpg" data-lity=""><img src="../uploads/1695282081_fc05c75d-186c-4f7a-a9ca-6fa373d88d15.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 26 Oct 2021</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Events											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/14-christmas-celebrations.html">Christmas Celebrations</a></h2>
+									
+
+									<p>The month of December brings a lot of warmth, hope and glad tidings. To spread the message of love and good cheer, MRA Senior Secondary Model School primary and Secondary classes with great ambience and aura presented a spectacular assembly on the occasion of the world&rsquo;s most loved and celebra...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/14-christmas-celebrations.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695281221_4-1.jpg" data-lity=""><img src="../uploads/1695281221_4-1.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 05 Sep 2021</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/13-childrens-day-celebration.html">Children’s Day Celebration</a></h2>
+									
+
+									<p>
+	"Climb every mountain, ford every stream, follow every rainbow, till you find your dream.
+	Dream big and work hard to fulfill your dreams."
+	
+	
+	A day marking childhood was celebrated with fun and frolic at MRA School, Sector- 27-A, Chandigarh. Classrooms were decorated by the teachers a day ...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/13-childrens-day-celebration.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+									<div class="col-sm-12 col-md-6 col-lg-6 witr_all_mb_30">
+						<div class="busi_singleBlog">
+							<div class="witr_sb_thumb">
+								<a href="../uploads/1695205029_IMG-20211118-WA0130.jpg" data-lity=""><img src="../uploads/1695205029_IMG-20211118-WA0130.jpg" alt=""></a>
+							</div>
+							<div class="all_blog_color">
+								<div class="witr_blog_con bs5">
+									<div class="location-finder">
+										<p><span class="timer"><i class="fa fa-clock-o" aria-hidden="true"></i> 20 Sep 2023</span></p>
+										<p>
+											<span class="font"><i class="fa fa-folder-open"></i>
+												Blogs											</span>
+											<span class="publish">Published By:</span><span class="admin">Admin</span>
+										</p>
+									</div>
+									<h2><a href="../blogs/details/10-gurupurab-celebration.html">Gurupurab Celebration</a></h2>
+									
+
+									<p>
+&ldquo;If the people use the wealth bestowed on them by God for themselves alone or for treasuring it, it is like a corpse. But if they decide to share it with others, it becomes sacred food.&rdquo;
+
+
+Moti Ram Arya Senior Secondary Model School, Sector-27-A, Chandigarh celebrated the 552nd birt...</p>
+									<div class="em-blog-content-area_adn ">
+										<div class="learn_more_adn"> <a class="learn_btn adnbtn2" href="../blogs/details/10-gurupurab-celebration.html">Read More<i class="icofont-arrow-right"></i> </a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="gurukul-blog-meta" style="display:none;">
+								<div class="gurukul-blog-meta-left">			
+									<span>Category</span>
+									<a href="#">0 Comments</a>
+								</div>
+							</div>
+						</div>
+					</div>
+											</div>
+		</div>
+	</div>
+</section>
+<!-- Footer -->
+
+  <footer id="footer" class="footer" >
+
+    <div class="container pt-30 pb-10 wow fadeInUp">
+
+      <div class="row">
+
+        <div class="col-sm-7 col-md-5">
+
+          <div class="widget dark contact-info">
+
+              <h4 class="widget-title line-bottom-theme-colored-2">Contact Details</h4>
+
+            <!-- <img class="mt-5 mb-20" alt="" src="images/logo-white-footer.png"> -->
+
+            <ul class="list-inline mt-5">
+
+                <li class="m-0 pl-10 pr-10"> <i class="fa fa-map-marker text-theme-colored2 mr-5"></i><span><a href="https://www.google.com/maps/place/Moti+Ram+Arya+School/@30.7248692,76.7968126,17z/data=!3m1!4b1!4m6!3m5!1s0x390fed1e41fd5629:0x685da8c8f68c6f1f!8m2!3d30.7248646!4d76.7993875!16s%2Fg%2F1vl9pwrs?entry=ttu" target="_blank">M.R.A Senior Secondary Model School, Sector 27 A, Chandigarh 160027 </a></span></li>
+
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i><a href="tel:+91 78148 34047">Phone: +91 78148 34047</li>
+
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored2 mr-5"></i> <a class="text-gray" href="mailto:mraschool@yahoo.com">mraschool@yahoo.com</a> </li>
+
+
+
+            </ul>   
+
+          </div>
+
+          <div class="widget dark ">
+
+            <ul class="styled-icons icon-sm icon-bordered icon-circled clearfix mt-10">
+
+                  <li><a href="https://www.facebook.com/mraschd" target="_blank"><img src="../assets/images/facebook.png" alt="face" style="user-select: auto"></a></li>
+
+                  <li><a href="https://www.instagram.com/mrachd27?igshid=YzAwZjE1ZTI0Zg%3D%3D" target="_blank"><img src="../assets/images/instagram.png" alt="insta" style="user-select: auto"></a></li>
+
+                  <li><a href="https://www.youtube.com/@motiramaryasector27" target="_blank"><img src="../assets/images/youtube.png" alt="youtube" style="user-select: auto"></a></li>
+
+                </ul>
+
+          </div>
+
+        </div>
+
+
+
+        
+
+
+
+        <div class="col-sm-5 col-md-3">
+
+          <div class="widget dark">
+
+            <h4 class="widget-title line-bottom-theme-colored-2">Useful Links</h4>
+
+            <ul class="angle-double-right list-border">
+
+              <li class="hvr-forward"><a href="../index.html">Home</a></li>
+
+              <li class="hvr-forward"><a target="" href="a-brief-history-of-school.html">About Us</a></li>
+
+              <li class="hvr-forward"><a href="../blogs.html">Blogs</a></li>
+
+              <li class="hvr-forward"><a href="fee-structure.html">Fee Structure</a></li> 
+
+               <li class="hvr-forward"><a href="../welcome/gallery.html">Gallery</a></li> 
+
+              <li class="hvr-forward"><a href="faculty.html">Faculty</a></li>
+
+              <li class="hvr-forward"><a target="" href="../contact.html">Contact Us</a></li>
+
+              <li class="hvr-forward"><a href="vision-and-mission.html">Vision & Mission</a></li> 
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+
+          <div class="widget dark ">         
+
+            <h4 class="widget-title line-bottom-theme-colored-2 ">School Calendar</h4>
+
+            <div id="event-list-mini-cal-container">
+
+                     
+									<table class="event-list-cal event-list-mini-cal">
+
+<tr>
+<h2 id="event-list-mini-cal-months">
+									<span id="event-list-mini-cal-prev"><a href="../home/index/2024/12.html"> &#x25C4; </a>
+									</span>
+<span id="event-list-mini-cal-date">January&nbsp;2025</span>
+<span 	id="event-list-mini-cal-next"><a href="../home/index/2025/02.html">&#x25BA; </a></span></h2>
+<col class="weekend_sun"><col class="weekday" span="5"><col class="weekend_sat">
+
+<thead><tr>
+<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+</tr></thead>
+								   <tbody>
+
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><div class="day">1</div></td><td><div class="day">2</div></td><td><div class="day">3</div></td><td><div class="day">4</div></td>
+</tr>
+
+<tr>
+<td><div class="day">5</div></td><td><div class="day">6</div></td><td><div class="day">7</div></td><td><div class="day">8</div></td><td><div class="day">9</div></td><td><div class="day">10</div></td><td><div class="day">11</div></td>
+</tr>
+
+<tr>
+<td><div class="day">12</div></td><td><div class="day">13</div></td><td><div class="day">14</div></td><td><div class="day">15</div></td><td><div class="day">16</div></td><td><div class="day">17</div></td><td><div class="day">18</div></td>
+</tr>
+
+<tr>
+<td><div class="day">19</div></td><td><div class="day">20</div></td><td><div class="day">21</div></td><td><div class="day">22</div></td><td><div class="day">23</div></td><td><div class="day">24</div></td><td><div class="day">25</div></td>
+</tr>
+
+<tr>
+<td><div class="day">26</div></td><td><div class="day">27</div></td><td><div class="day">28</div></td><td><div class="day">29</div></td><td><div class="today">30</div></td><td><div class="day">31</div></td><td>&nbsp;</td>
+</tr>
+
+</tbody></table>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom" style="background: none !important;border-top: 1px solid #676767;">
+
+      <div class="container pt-20 pb-20">
+
+        <div class="row">
+
+          <div class="col-md-9 col-sm-9">
+
+            <p class="font-12 text-black-777 m-0">Copyright &copy; 2025 M. R. A. Sr. Sec. Model School. All Rights Reserved</p>
+
+          </div>
+
+          <div class="col-sm-3 col-md-3 text-right">
+
+            <div class="widget no-border m-0">
+
+                <p class="footer-logo-cybrain fbgdf" style="float:right;">
+
+                    <a href="https://www.cybrain.co.in/" target="blank"><img class="cybrain_logo" src="../assets/images/cybrain-logo.png" alt="footer_logo"></a>
+
+                </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <a class="button btn-overlayed" target="blank" href="information-of-admissions-session-2024-25.html" style="user-select: auto;" >Admission Open</a>
+
+    <a class="button btn-overlayed pay_fee_mobile" target="blank" href="https://onlinefee.cyberschoolmanager.com/mrachd/" style="user-select: auto;" >Pay Fee Online</a>
+
+  </footer>
+
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+
+</div>
+
+<!-- end wrapper -->
+   <script src="../assets/layout/js/jquery-2.2.4.min.js"></script>
+   <script src="../assets/layout/js/jquery-ui.min.js"></script>
+   <script src="../assets/layout/js/bootstrap.min.js"></script>
+  <!--Custome js -->
+   <script src="../assets/layout/js/lity.min.js"></script>
+  <script type="text/javascript" src="../assets/layout/js/jquery.fancybox.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();     
+   });
+  </script>
+
+  <style>
+.event-list-mini-cal-hover {
+  display: none;
+}    
+
+.event-list-mini-cal-event:hover + .event-list-mini-cal-hover {
+  display: block;
+  color: red;
+}
+
+</style>
+<script>
+.carousel-inner .item {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Set active slide to full opacity */
+        .carousel-inner .active {
+            opacity: 1;
+        }
+</script>
+  	<script>       
+
+				$("[data-fancybox]").fancybox({
+		// Options will go here
+		});
+		$('.carousel').carousel()	;
+		var windows = $(window);
+			var stick = $(".custom_nav");
+			windows.on('scroll', function()
+			{
+				var scroll = windows.scrollTop();
+				if (scroll < 100)
+				{
+					stick.removeClass("sticky");
+				}
+				else
+				{
+					stick.addClass("sticky");
+				}
+        });
+
+			// BY KAREN GRIGORYAN
+
+          </script>
+
+<script>
+  $("#myCarousel").carousel({
+            interval: 8000,
+            pause: true,
+            cycle:true                
+})
+  </script>
+
+
+
+<script>
+  $("#slideshow > div:gt(0)").hide();
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+
+</script>
+
+
+
+
+
+<script>
+      var $window = $(window);
+      var header = $(".header");
+      $window.scroll(function () {
+        if ($window.scrollTop() >= 100) {
+          header.addClass("navbar-fixed-top");
+        } else {
+          header.removeClass("navbar-fixed-top");
+        }
+      });
+</script>
+
+    
+
+<script>
+      $(document).ready(function() {
+      $('#global-modal32').modal('show');
+    $(".navbar-toggle").click(function () {
+      $(".navbar-collapse").toggleClass("main");
+    }); 
+
+    $(".dropdown-toggle").click(function () {
+      // Close all other open dropdown menus
+      $(".dropdown-menu").not($(this).siblings(".dropdown-menu")).removeClass("menu-open");  
+      // Toggle the class for the clicked dropdown menu
+      $(this).siblings(".dropdown-menu").toggleClass("menu-open");
+    });
+    });
+ </script>
+
+
+
+ 
+
+</body>
+
+
+
+
+
+
+<!-- Mirrored from www.mrachd.com/page/blogs by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jan 2025 11:44:12 GMT -->
+</html>

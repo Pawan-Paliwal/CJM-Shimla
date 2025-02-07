@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+
+
+
+<html dir="ltr" lang="en">
+
+
+
+
+<!-- Mirrored from www.mrachd.com/activities/details/42-blood-donation-awareness-rally by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jan 2025 11:46:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+
+
+  <link rel="shortcut icon" type="image/jpg" href="../../assets/layout/images/faviconmra.png">
+
+
+
+
+
+
+
+  <!-- Meta Tags -->
+
+
+
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+
+
+
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+
+
+
+
+
+
+  <title>
+
+
+
+
+
+
+
+    Best CBSE School in Chandigarh
+
+
+
+
+
+
+  </title>
+
+
+
+
+
+
+
+  <meta name="description" content="M.R.A Modern Public School is best CBSE school in Chandigarh, Chandi Mandir and Manimajra. Our students achieve success in all areas of life and are a source of pride for us." />
+
+
+
+
+
+
+
+  <meta name="keywords" content="Best school in Chandigarh, Best CBSE school in Chandigarh, Top school in Chandigarh" />
+
+
+
+
+
+
+
+  <meta name="robots" content="index, follow">
+
+
+
+
+
+
+
+  <link rel="canonical" href="../../index.html" />
+
+
+
+
+
+
+
+
+
+
+
+  <!-- Stylesheet -->
+
+
+
+
+
+
+
+  <link href="../../assets/layout/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+  <link href="../../assets/layout/css/lity.min.css" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+  <link href="../../assets/layout/css/jquery-ui.min.css" rel="stylesheet" type="text/css">
+
+  <link href="../../assets/layout/css/animate.css" rel="stylesheet" type="text/css">
+
+
+  <!-- CSS | Main style file -->
+
+
+
+  <link href="../../assets/layout/css/style-main68b3.css?ver=1" rel="stylesheet" type="text/css">
+
+  <link href="../../assets/layout/fonts/algerian-regular/AlgerianRegular.ttf" rel="stylesheet" type="text/css">
+
+  <link href="../../assets/layout/css/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+
+  <!-- CSS | Preloader Styles -->
+
+  <link href="../../assets/layout/css/preloader.css" rel="stylesheet" type="text/css">
+
+  <!-- CSS | Custom Margin Padding Collection -->
+
+  <link href="../../assets/layout/css/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
+
+  <!-- CSS | Responsive media queries -->
+
+  <link href="../../assets/layout/css/responsive77ae.css?ver=2" rel="stylesheet" type="text/css">
+
+  <link href="../../assets/layout/css/hover.css" rel="stylesheet" type="text/css">
+
+<!-- Include Swiper CSS /JS-->
+<link rel="stylesheet" href="../../../unpkg.com/swiper%4011.2.1/swiper-bundle.min.css">
+<script src="../../../unpkg.com/swiper%4011.2.1/swiper-bundle.min.js"></script>
+
+<script>
+  const apiKey = "AIzaSyAeQ1J_Ho_qJv6ddfLFBivVP4vO307mV6M";
+  const channelId = "UC0mn_LW6UAJsu7eBun32NSQ";
+
+  fetch(`https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet&type=video&maxResults=50`)
+    .then(response => response.json())
+    .then(data => {
+      const container = document.getElementById('video-container');
+      const totalResults = data.pageInfo.totalResults; // Total number of videos
+
+      // Iterate over the videos and create slides
+      data.items.forEach(item => {
+        const videoId = item.id.videoId;
+        const title = item.snippet.title;
+        const thumbnail = item.snippet.thumbnails.medium.url;
+
+        const videoSlide = `
+          <div class="swiper-slide">
+            <div class="video-item">
+              <h3>${title}</h3>
+              <div class="thumbnail-wrapper">
+                <img src="${thumbnail}" alt="${title}" class="thumbnail" data-video-id="${videoId}">
+                <button class="play-button" data-video-id="${videoId}">Play Here</button>
+              </div>
+            </div>
+          </div>
+        `;
+        container.innerHTML += videoSlide;
+      });
+
+      // Ensure no extra slides are shown if there are fewer videos than Swiper's loop setting
+      const swiperSlides = document.querySelectorAll('.swiper-slide');
+      if (swiperSlides.length > totalResults) {
+        swiperSlides.forEach((slide, index) => {
+          if (index >= totalResults) {
+            slide.remove();
+          }
+        });
+      }
+
+      // Initialize Swiper
+      new Swiper('.swiper-container', {
+        loop: false, // Disable loop to prevent showing non-existing slides
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        slidesPerView: 1,
+        spaceBetween: 10,
+        breakpoints: {
+          640: { slidesPerView: 2 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 4 },
+        },
+      });
+
+      // Handle Play Button Click
+      document.addEventListener('click', function (e) {
+        if (e.target.classList.contains('play-button')) {
+          const videoId = e.target.dataset.videoId;
+          const thumbnailWrapper = e.target.parentElement;
+          thumbnailWrapper.innerHTML = `
+            <iframe width="100%" height="200" 
+              src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+              frameborder="0" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+            </iframe>
+          `;
+        }
+      });
+    })
+    .catch(err => console.error('Error fetching YouTube API:', err));
+</script>
+ 
+
+
+ <script>
+        // Show popup on page load
+        document.addEventListener('DOMContentLoaded', function () {
+            const popup = document.getElementById('popup');
+            const overlay = document.getElementById('overlay');
+            const closeBtn = document.querySelector('.close-btn');
+
+            // Show the popup and overlay
+            popup.style.display = 'block';
+            overlay.style.display = 'block';
+
+            // Close the popup when the close button is clicked
+            closeBtn.addEventListener('click', function () {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            });
+
+            // Close the popup when overlay is clicked
+            overlay.addEventListener('click', function () {
+                popup.style.display = 'none';
+                overlay.style.display = 'none';
+            });
+        });
+    </script>
+
+
+ <style>
+        /* Popup styling */
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 9999;
+            background: #fff;
+            border: 2px solid #ccc;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            border-radius: 8px;
+        }
+        #popup img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        #overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8); /* Light black background */
+            z-index: 999;
+        }
+        .close-btn {
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .close-btn:hover {
+            background: #0056b3;
+        }
+    </style>
+
+
+
+
+
+</head>
+
+<body class="">
+
+
+<div id="overlay"></div>
+    <div id="popup">
+        <img src="../../uploads/1733549131_mrabanner.jpg" alt="Popup Image">
+        <br>
+        <button class="close-btn">Close</button>
+    </div>
+
+
+
+
+  <div id="wrapper" class="clearfix">
+
+
+
+
+
+
+
+    <!--Header Section-->
+
+
+
+    <header id="header" class="header" style="user-select: auto">
+
+
+
+      <div class="header-nav" style="user-select: auto">
+
+
+
+        <div class="header-nav-wrapper navbar-scrolltofixed bg-orange" style="user-select: auto">
+
+
+
+          <div class="container" style="user-select: auto">
+
+
+
+            <div class="row logo-section-row" style="user-select: auto">
+
+
+
+              <div class="logo-section-mra" style="user-select: auto">
+
+
+
+                <a class="menuzord-brand pull-left flip sm-pull-center mb-3" href="../../index.html" style="user-select: auto">
+
+
+
+                  <img src="../../assets/images/moti-logo.png" alt="Mra School Logo" style="user-select: auto" />
+
+
+
+                  <p style="user-select: auto">
+
+
+
+                    <span class="big-logo" style="user-select: auto">Moti Ram Arya</span><br style="user-select: auto" />
+
+
+
+                    <span class="medium-logo" style="user-select: auto">Sr. Sec. Model School</span><br style="user-select: auto" />
+
+
+
+                    <span class="small-logo" style="user-select: auto">Sector 27-A, Chandigarh</span>
+
+
+
+                  </p>
+
+
+
+                </a>
+
+
+
+              </div>
+
+
+
+
+
+
+
+              <div class="navigation-mra" style="user-select: auto">
+
+
+
+                <div class="top_box flw hidden-md hidden-sm hidden-xs " style="user-select: auto">
+
+
+
+                  <ul class="under-list" style="user-select: auto">
+
+
+
+                    <li style="user-select: auto">
+                      <a class="Adm-button" target="blank" href="https://mrachd.cyberschoolmanager.com/Registration/mrachd/OnlineRegistration.aspx" style="user-select: auto">Student Registration</a>
+                   </li>
+                    <li style="user-select: auto">
+                      <a class="pay-button" href="https://onlinefee.cyberschoolmanager.com/mrachd/" target="_blank" style="user-select: auto">Pay Fee Online</a>
+                    </li>
+                    <ul class="under-list social-flex" style="user-select: auto">
+                      <li style="user-select: auto">
+                        <span class="phone" style="user-select: auto">
+                          <i class="fa fa-phone text-theme-colored2 mr-5" style="user-select: auto"></i> </span> 
+                           <a class="admission-call" target="blank" href="tel:01724186773" style="user-select: auto">+0172-4186773</a> 
+                      </li>
+                      <li style="user-select: auto">
+                        <span class="phone" style="user-select: auto">
+                          <i class="fa fa-envelope-o text-theme-colored2 mr-5" style="user-select: auto"></i></span> 
+                           <a class="admission-call" target="blank" href="mailto:mraschool@yahoo.com" style="user-select: auto">mraschool@yahoo.com</a>
+                      </li>
+
+
+
+                    </ul>
+
+                    <ul class="styled-icons icon-sm icon-bordered icon-circled clearfix  social_icn_fi">
+
+                     <li><a href="https://www.facebook.com/mraschd" target="_blank"><img src="../../assets/images/facebook.png" alt="face" style="user-select: auto"></a></li>
+
+                     <li><a href="https://www.instagram.com/mrachd27?igshid=YzAwZjE1ZTI0Zg%3D%3D" target="_blank"><img src="../../assets/images/instagram.png" alt="insta" style="user-select: auto"></a></li>
+
+                     <li><a href="https://www.youtube.com/@motiramaryasector27" target="_blank"><img src="../../assets/images/youtube.png" alt="youtube" style="user-select: auto"></a></li>
+
+                   </ul>
+
+                   
+
+                 </ul>
+
+                
+
+
+
+                </div>
+
+
+
+
+
+
+
+                <!-- navbar -->
+
+
+
+                <nav class="navbar navbar-default navbar-static-top">
+
+
+
+                  <div class="container-fluid">
+
+
+
+                    <div class="navbar-header">
+
+
+
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar1">
+
+
+
+                        <span class="sr-only">Toggle navigation</span>
+
+
+
+                        <span class="icon-bar"></span>
+
+
+
+                        <span class="icon-bar"></span>
+
+
+
+                        <span class="icon-bar"></span>
+
+
+
+                      </button>
+
+
+
+                    </div>
+
+
+
+                    <div id="navbar1" class="navbar-collapse collapse">
+
+                        
+
+                        <ul class="nav navbar-nav"> <li><a href="../../index.html">Home</a></li><li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">About Us <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="../../page/vision-and-mission.html">Vision and Mission</a></li><li><a href="../../page/our-founder-president.html">Our Founder President</a></li><li><a href="../../page/our-president.html">Our President</a></li><li><a href="../../page/our-director.html">Our Director</a></li><li><a href="../../page/our-principal.html">Our Principal</a></li><li><a href="../../page/our-head-mistress.html">Our Head Mistress</a></li><li><a href="../../page/faculty.html">Faculty</a></li><li><a href="../../page/school-management-committee.html">School Management Committee</a></li></ul></li><li><a href="../../page/mandatory-public-disclosure.html">Mandatory Public Disclosure</a></li><li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Admission <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="../../page/information-procedure.html">Information & Procedure</a></li><li><a href="../../page/information-of-admissions-session-2024-25.html">Information of admissions session 2025-26</a></li><li><a href="../../page/fee-structure.html">Fee Structure</a></li></ul></li><li class="dropdown"><a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown">Events & Happenings <span class="caret"></span></a><ul class="dropdown-menu"><li><a href="../../page/welcome/gallery.html">Photo Gallery</a></li><li><a href="../../page/Gallery/mediacoverage.html">Media Coverage</a></li><li><a href="../../page/activities.html">Activities</a></li></ul></li><li><a href="../../page/blogs.html">Blogs</a></li><li><a href="../../page/contact.html">Contact Us</a></li></ul>
+                        
+
+                      <!--  <ul class="nav navbar-nav">-->
+
+
+
+                      <!--  <li class="active"><a href="https://www.mrachd.com/">Home</a></li>-->
+
+
+
+                      <!--<li class="dropdown">-->
+
+                      <!--     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">About <span class="caret"></span></a>-->
+
+                      <!--     <ul class="dropdown-menu" role="menu">-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/a-brief-history-of-school">A Brief History of School</a></li>-->
+
+                      <!--         <li><a href="/page/vision-and-mission">Vision and Mission</a></li>-->
+
+                      <!--         <li><a href="/page/our-founder-president">Our Founder President</a></li>-->
+
+                      <!--         <li><a href="/page/our-president">Our President</a></li>-->
+
+                      <!--         <li><a href="/page/our-director">Our Director</a></li>-->
+
+                      <!--         <li><a href="/page/our-principal">Our Principal</a></li>-->
+
+                      <!--         <li><a href="/page/our-head-mistress">Our Head Mistress</a></li>-->
+
+                      <!--         <li><a href="/page/faculty">Faculty</a></li>-->
+
+                      <!--         <li><a href="/page/educators">Our Educators</a></li>-->
+
+                      <!--         <li><a href="/page/school-management-committee">School Management Committee</a></li>-->
+
+                      <!--     </ul>-->
+
+                      <!-- </li>-->
+
+                      <!-- <li><a href="https://www.mrachd.com/page/mandatory-public-disclosure">Mandatory Public Disclosure</a></li>-->
+
+                       
+
+                      <!-- <li class="dropdown">-->
+
+                      <!--     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Admission <span class="caret"></span></a>-->
+
+                      <!--     <ul class="dropdown-menu" role="menu">-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/list-of-selected-students">List Of Selected Students</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/information-procedure">Information & Procedure</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/information-of-admissions-session-2023-24">Information of admissions session 2023-24</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/page/fee-structure">Fee Structure</a></li>-->
+
+                      <!--     </ul>-->
+
+                      <!-- </li>-->
+
+                       
+
+                      <!-- <li>-->
+
+                      <!--       <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Events and Happenings <span class="caret"></span></a>-->
+
+                      <!--     <ul class="dropdown-menu" role="menu">-->
+
+                      <!--         <li><a href="https://www.mrachd.com/welcome/gallery">Photo Gallery</a></li>-->
+
+                               <!--<li><a href="https://www.mrachd.com/Gallery/videos">Video Gallery</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/Gallery/mediacoverage">Media's Coverage</a></li>-->
+
+                      <!--         <li><a href="https://www.mrachd.com/activities">Activities</a></li>-->
+
+                               <!--<li><a href="#">Achievements</a></li>-->
+
+                      <!--     </ul>-->
+
+                      <!-- </li>-->
+
+                       
+
+                      <!-- <li><a href="https://www.mrachd.com/blogs">Blogs</a></li>-->
+
+                       
+
+                      <!-- <li><a href="https://www.mrachd.com/contact">Contact Us</a></li>-->
+
+                       
+
+                      <!-- </ul>-->
+
+
+
+                      
+
+
+
+                    </div>
+
+
+
+                    <!--/.nav-collapse -->
+
+
+
+                  </div>
+
+
+
+                  <!--/.container-fluid -->
+
+
+
+                </nav>
+
+
+
+              </div>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <!-- ---Header Section close here  -->
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+  </header> <section id="detail-blog" class="bolg-detail-page detailed-blogs">
+  <div class="container">
+    <div class="col-md-12">
+      <div class="row">
+        <div class="row col-sm-12 blog_main_block">
+          <!-- <div class="left-content">
+            <div class="single_blog_thumb">
+              <a href="
+								https://www.mrachd.com/uploads/activities/1733300267_IMG_20241122_073039.jpg" data-lity>
+                <img src="
+									https://www.mrachd.com/uploads/activities/1733300267_IMG_20241122_073039.jpg" alt="img">
+              </a>
+            </div>
+          </div> -->
+          <div class="right-content">
+            <div class="gurukul-single-blog-title">
+              <h2> Blood Donation Awareness Rally </h2>
+            </div>
+            <div class="mra-home">
+              <div class="main-inner-blog">
+              <div class="left-display">
+              <div class="single_blog_thumb">
+              <a href="../../uploads/activities/1733300267_IMG_20241122_073039.jpg" data-lity>
+                <img src="../../uploads/activities/1733300267_IMG_20241122_073039.jpg" alt="img">
+              </a>
+            </div>
+            </div>
+                <ul class="whom&amp;to">
+                  <li>
+                    <span>Post On:</span> 22 Nov 2024                  </li>
+                  <li>
+                    <span>Category: <i class="far fa-folder-open"></i> Senior Wing </span>
+                  </li>
+                </ul>
+                <p> <p>In a heartwarming display of social responsibility, the students of Moti Ram Arya Sr.Secondary School, accompanied by their enthusiastic teachers, visited the city&rsquo;s iconic Sukhna Lake on 22 nd November ,2024 to raise awareness about the importance of blood donation being held on 23rd November 2024 in the memory of our Late President Sh.Hardayal Mahajan. This initiative was a part of the school&rsquo;s ongoing centenary celebrations, marking 100 years of excellence and community service.</p>
+
+<p>The event featured a powerful Nukkad Natak (street play) performed by the students, creatively showcasing the life-saving impact of blood donation. With banners and slogans like &ldquo;Be a Hero, Donate Blood&rdquo; and &ldquo;A Drop of Blood, A Ray of Hope,&rdquo;and &ldquo;Be the reason behind someone&rsquo;s smile &ldquo; the students passionately engaged the crowd, urging them to join hands in this noble cause.</p>
+
+<p>Teachers actively participated in the event, motivating both the students and the people at the lake. Their presence added energy and enthusiasm, making the event even more impactful. The collaboration between students and teachers demonstrated the spirit of teamwork and the school&rsquo;s unwavering commitment to societal welfare.</p>
+
+<p>The Director, Ms. Rachna Mahajan, and the Principal, Dr. Seema Biji, played an instrumental role in encouraging the educators and students to take up this initiative. Their inspiring words and leadership were the driving force behind the success of the event.</p>
+
+<p>The response from the public was overwhelming, with many visitors pledging to participate in the upcoming blood donation drive. The event not only educated people about the need for regular blood donation but also strengthened the school&rsquo;s bond with the community.</p>
+
+<p>Through this initiative, Moti Ram Arya Sr.Sec. Model School has once again proved its dedication to fostering social awareness and compassion among its students. As the school celebrates its 100-year milestone, this event stands as a testament to its legacy of inspiring positive change and building a better future.</p>
+
+<p>The school management thanked the teachers, students, and community members for making this event a grand success and promised to continue organizing similar impactful initiatives as part of the centennial celebrations</p>
+ </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 	<div class="col-md-12 wrapper"><div class="image-grid">
+			</div></div> -->
+  </div>
+</section><!-- Footer -->
+
+  <footer id="footer" class="footer" >
+
+    <div class="container pt-30 pb-10 wow fadeInUp">
+
+      <div class="row">
+
+        <div class="col-sm-7 col-md-5">
+
+          <div class="widget dark contact-info">
+
+              <h4 class="widget-title line-bottom-theme-colored-2">Contact Details</h4>
+
+            <!-- <img class="mt-5 mb-20" alt="" src="images/logo-white-footer.png"> -->
+
+            <ul class="list-inline mt-5">
+
+                <li class="m-0 pl-10 pr-10"> <i class="fa fa-map-marker text-theme-colored2 mr-5"></i><span><a href="https://www.google.com/maps/place/Moti+Ram+Arya+School/@30.7248692,76.7968126,17z/data=!3m1!4b1!4m6!3m5!1s0x390fed1e41fd5629:0x685da8c8f68c6f1f!8m2!3d30.7248646!4d76.7993875!16s%2Fg%2F1vl9pwrs?entry=ttu" target="_blank">M.R.A Senior Secondary Model School, Sector 27 A, Chandigarh 160027 </a></span></li>
+
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-phone text-theme-colored2 mr-5"></i><a href="tel:+91 78148 34047">Phone: +91 78148 34047</li>
+
+              <li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o text-theme-colored2 mr-5"></i> <a class="text-gray" href="mailto:mraschool@yahoo.com">mraschool@yahoo.com</a> </li>
+
+
+
+            </ul>   
+
+          </div>
+
+          <div class="widget dark ">
+
+            <ul class="styled-icons icon-sm icon-bordered icon-circled clearfix mt-10">
+
+                  <li><a href="https://www.facebook.com/mraschd" target="_blank"><img src="../../assets/images/facebook.png" alt="face" style="user-select: auto"></a></li>
+
+                  <li><a href="https://www.instagram.com/mrachd27?igshid=YzAwZjE1ZTI0Zg%3D%3D" target="_blank"><img src="../../assets/images/instagram.png" alt="insta" style="user-select: auto"></a></li>
+
+                  <li><a href="https://www.youtube.com/@motiramaryasector27" target="_blank"><img src="../../assets/images/youtube.png" alt="youtube" style="user-select: auto"></a></li>
+
+                </ul>
+
+          </div>
+
+        </div>
+
+
+
+        
+
+
+
+        <div class="col-sm-5 col-md-3">
+
+          <div class="widget dark">
+
+            <h4 class="widget-title line-bottom-theme-colored-2">Useful Links</h4>
+
+            <ul class="angle-double-right list-border">
+
+              <li class="hvr-forward"><a href="../../index.html">Home</a></li>
+
+              <li class="hvr-forward"><a target="" href="../../page/a-brief-history-of-school.html">About Us</a></li>
+
+              <li class="hvr-forward"><a href="../../blogs.html">Blogs</a></li>
+
+              <li class="hvr-forward"><a href="../../page/fee-structure.html">Fee Structure</a></li> 
+
+               <li class="hvr-forward"><a href="../../welcome/gallery.html">Gallery</a></li> 
+
+              <li class="hvr-forward"><a href="../../page/faculty.html">Faculty</a></li>
+
+              <li class="hvr-forward"><a target="" href="../../contact.html">Contact Us</a></li>
+
+              <li class="hvr-forward"><a href="../../page/vision-and-mission.html">Vision & Mission</a></li> 
+
+            </ul>
+
+          </div>
+
+        </div>
+
+        <div class="col-sm-12 col-md-4">
+
+          <div class="widget dark ">         
+
+            <h4 class="widget-title line-bottom-theme-colored-2 ">School Calendar</h4>
+
+            <div id="event-list-mini-cal-container">
+
+                     
+									<table class="event-list-cal event-list-mini-cal">
+
+<tr>
+<h2 id="event-list-mini-cal-months">
+									<span id="event-list-mini-cal-prev"><a href="../../home/index/2024/12.html"> &#x25C4; </a>
+									</span>
+<span id="event-list-mini-cal-date">January&nbsp;2025</span>
+<span 	id="event-list-mini-cal-next"><a href="../../home/index/2025/02.html">&#x25BA; </a></span></h2>
+<col class="weekend_sun"><col class="weekday" span="5"><col class="weekend_sat">
+
+<thead><tr>
+<th>Sun</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th><th>Sat</th>
+</tr></thead>
+								   <tbody>
+
+<tr>
+<td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><div class="day">1</div></td><td><div class="day">2</div></td><td><div class="day">3</div></td><td><div class="day">4</div></td>
+</tr>
+
+<tr>
+<td><div class="day">5</div></td><td><div class="day">6</div></td><td><div class="day">7</div></td><td><div class="day">8</div></td><td><div class="day">9</div></td><td><div class="day">10</div></td><td><div class="day">11</div></td>
+</tr>
+
+<tr>
+<td><div class="day">12</div></td><td><div class="day">13</div></td><td><div class="day">14</div></td><td><div class="day">15</div></td><td><div class="day">16</div></td><td><div class="day">17</div></td><td><div class="day">18</div></td>
+</tr>
+
+<tr>
+<td><div class="day">19</div></td><td><div class="day">20</div></td><td><div class="day">21</div></td><td><div class="day">22</div></td><td><div class="day">23</div></td><td><div class="day">24</div></td><td><div class="day">25</div></td>
+</tr>
+
+<tr>
+<td><div class="day">26</div></td><td><div class="day">27</div></td><td><div class="day">28</div></td><td><div class="day">29</div></td><td><div class="today">30</div></td><td><div class="day">31</div></td><td>&nbsp;</td>
+</tr>
+
+</tbody></table>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+      </div>
+
+    </div>
+
+    <div class="footer-bottom" style="background: none !important;border-top: 1px solid #676767;">
+
+      <div class="container pt-20 pb-20">
+
+        <div class="row">
+
+          <div class="col-md-9 col-sm-9">
+
+            <p class="font-12 text-black-777 m-0">Copyright &copy; 2025 M. R. A. Sr. Sec. Model School. All Rights Reserved</p>
+
+          </div>
+
+          <div class="col-sm-3 col-md-3 text-right">
+
+            <div class="widget no-border m-0">
+
+                <p class="footer-logo-cybrain fbgdf" style="float:right;">
+
+                    <a href="https://www.cybrain.co.in/" target="blank"><img class="cybrain_logo" src="../../assets/images/cybrain-logo.png" alt="footer_logo"></a>
+
+                </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <a class="button btn-overlayed" target="blank" href="../../page/information-of-admissions-session-2024-25.html" style="user-select: auto;" >Admission Open</a>
+
+    <a class="button btn-overlayed pay_fee_mobile" target="blank" href="https://onlinefee.cyberschoolmanager.com/mrachd/" style="user-select: auto;" >Pay Fee Online</a>
+
+  </footer>
+
+  <a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+
+</div>
+
+<!-- end wrapper -->
+   <script src="../../assets/layout/js/jquery-2.2.4.min.js"></script>
+   <script src="../../assets/layout/js/jquery-ui.min.js"></script>
+   <script src="../../assets/layout/js/bootstrap.min.js"></script>
+  <!--Custome js -->
+   <script src="../../assets/layout/js/lity.min.js"></script>
+  <script type="text/javascript" src="../../assets/layout/js/jquery.fancybox.min.js"></script>
+
+<script>
+  $(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();     
+   });
+  </script>
+
+  <style>
+.event-list-mini-cal-hover {
+  display: none;
+}    
+
+.event-list-mini-cal-event:hover + .event-list-mini-cal-hover {
+  display: block;
+  color: red;
+}
+
+</style>
+<script>
+.carousel-inner .item {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        /* Set active slide to full opacity */
+        .carousel-inner .active {
+            opacity: 1;
+        }
+</script>
+  	<script>       
+
+				$("[data-fancybox]").fancybox({
+		// Options will go here
+		});
+		$('.carousel').carousel()	;
+		var windows = $(window);
+			var stick = $(".custom_nav");
+			windows.on('scroll', function()
+			{
+				var scroll = windows.scrollTop();
+				if (scroll < 100)
+				{
+					stick.removeClass("sticky");
+				}
+				else
+				{
+					stick.addClass("sticky");
+				}
+        });
+
+			// BY KAREN GRIGORYAN
+
+          </script>
+
+<script>
+  $("#myCarousel").carousel({
+            interval: 8000,
+            pause: true,
+            cycle:true                
+})
+  </script>
+
+
+
+<script>
+  $("#slideshow > div:gt(0)").hide();
+setInterval(function() {
+  $('#slideshow > div:first')
+    .fadeOut(1000)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('#slideshow');
+}, 3000);
+
+</script>
+
+
+
+
+
+<script>
+      var $window = $(window);
+      var header = $(".header");
+      $window.scroll(function () {
+        if ($window.scrollTop() >= 100) {
+          header.addClass("navbar-fixed-top");
+        } else {
+          header.removeClass("navbar-fixed-top");
+        }
+      });
+</script>
+
+    
+
+<script>
+      $(document).ready(function() {
+      $('#global-modal32').modal('show');
+    $(".navbar-toggle").click(function () {
+      $(".navbar-collapse").toggleClass("main");
+    }); 
+
+    $(".dropdown-toggle").click(function () {
+      // Close all other open dropdown menus
+      $(".dropdown-menu").not($(this).siblings(".dropdown-menu")).removeClass("menu-open");  
+      // Toggle the class for the clicked dropdown menu
+      $(this).siblings(".dropdown-menu").toggleClass("menu-open");
+    });
+    });
+ </script>
+
+
+
+ 
+
+</body>
+
+
+
+
+
+
+<!-- Mirrored from www.mrachd.com/activities/details/42-blood-donation-awareness-rally by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 30 Jan 2025 11:46:22 GMT -->
+</html>
