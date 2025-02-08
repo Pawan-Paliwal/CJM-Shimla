@@ -16506,8 +16506,8 @@ ul.under-list.social-flex a.admission-call:hover {
 }
 
 section#about {
-  padding: 25px 0;
-
+  /* padding: 25px 0; */
+  padding-top: 12px;
   /* background: #f5f6f7; */
 }
 .act_content p {
@@ -18112,11 +18112,18 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
 .aim-container li {
   min-height: 9px;
   padding: 7px;
+  cursor: pointer;
   margin-bottom: 5px;
   background-color: #f5f5f5;
   border: 1px solid #770c0c;
   border-radius: 12px;
+  transition: transform 0.3s ease-in-out;
 }
+
+.aim-container li:hover {
+  transform: translateY(-5px);
+}
+
 .dot-container p {
   min-height: 9px;
   padding: 7px;
@@ -18142,7 +18149,6 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
   margin-right: 12px;
 }
 
-
 .fee-section {
   padding: 20px;
   background-color: #f0f0f0;
@@ -18158,26 +18164,26 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
 
 @media (max-width: 767px) {
   .container-custom {
-      max-width: 100%;
+    max-width: 100%;
   }
 
   .fee-section {
-      padding: 2px;
-      background-color: #f0f0f0;
+    padding: 2px;
+    background-color: #f0f0f0;
   }
 
   .container-custom {
-      width: 100%;
-      padding-right: 6px;
-      padding-left: 4px;
-      margin-right: auto;
-      margin-left: auto;
+    width: 100%;
+    padding-right: 6px;
+    padding-left: 4px;
+    margin-right: auto;
+    margin-left: auto;
   }
 }
 
 @media (min-width: 768px) {
   .container-custom {
-      max-width: 1140px;
+    max-width: 1140px;
   }
 }
 
@@ -18237,7 +18243,7 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
 
 @media (max-width: 768px) {
   .fee-container {
-      padding: 10px;
+    padding: 10px;
   }
 }
 
@@ -18262,11 +18268,294 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
   width: 100%;
   height: 100%;
   background: repeating-linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.1) 0px,
-      rgba(255, 255, 255, 0.1) 2px,
-      transparent 2px,
-      transparent 10px
+    90deg,
+    rgba(255, 255, 255, 0.1) 0px,
+    rgba(255, 255, 255, 0.1) 2px,
+    transparent 2px,
+    transparent 10px
   );
   opacity: 0.3;
+}
+
+/* From Uiverse.io by gharsh11032000 */
+.card-descipline {
+  position: relative;
+  margin-top: 43px;
+  margin-bottom: 43px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 320px;
+  border-radius: 24px;
+  line-height: 1.6;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-descipline .content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 36px;
+  border-radius: 22px;
+  color: #ffffff;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0b0072 10%, #3b0092 50%, #7300b2 90%);
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.discipline-card {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.card-descipline .content::before {
+  position: absolute;
+  content: "";
+  top: -4%;
+  left: 50%;
+  width: 90%;
+  height: 90%;
+  transform: translate(-50%);
+  background: #ced8ff;
+  z-index: -1;
+  transform-origin: bottom;
+  border-radius: inherit;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-descipline .content::after {
+  position: absolute;
+  content: "";
+  top: -8%;
+  left: 50%;
+  width: 80%;
+  height: 80%;
+  transform: translate(-50%);
+  background: #e7ecff;
+  z-index: -2;
+  transform-origin: bottom;
+  border-radius: inherit;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-descipline .content svg {
+  width: 48px;
+  height: 48px;
+}
+
+.card-descipline .content .para {
+  z-index: 1;
+  opacity: 1;
+  font-size: 18px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-descipline .content .link {
+  z-index: 1;
+  color: #fea000;
+  text-decoration: none;
+  font-family: inherit;
+  font-size: 16px;
+  transition: all 0.48s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.card-descipline .content .link:hover {
+  text-decoration: underline;
+}
+
+.card-descipline:hover {
+  transform: translate(0px, -16px);
+}
+
+.card-descipline:hover .content::before {
+  rotate: -8deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-descipline:hover .content::after {
+  rotate: 8deg;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Punctuality-card {
+  padding: 20px;
+}
+.Punctuality-card li {
+  margin-bottom: 15px;
+}
+ul.wrapperAims {
+  display: flex !important;
+  flex-wrap: wrap !important;
+}
+
+ul.wrapperAims li {
+  flex: 0 0 auto !important;
+  width: 50%;
+  padding: 5px;
+}
+.wrapperAimsLi {
+  height: 142px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  line-height: 28px;
+  color: #000;
+  font-weight: 400;
+  margin-bottom: 0;
+  margin-top: 0;
+  border: 6px solid rgba(25, 55, 110, 0.0588235294);
+  padding: 12px 20px;
+  background: #eff5fa;
+}
+
+.silence-container {
+  height: 22rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.counsil-box {
+  background: rgba(251, 168, 52, 0.3137254902);
+  border-radius: 22px;
+  height: 223px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  margin: 55px 12px;
+}
+.counsil-box-second {
+  background: rgba(57, 131, 187, 0.3137254902);
+  border-radius: 22px;
+  height: 223px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  margin: 55px 12px;
+}
+.counsil-box p {
+  color: #9e0000;
+}
+.counsil-box-secondp {
+  color: #9e0000;
+}
+
+.counsil-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .counsil-box {
+    background: rgba(251, 168, 52, 0.3137254902);
+    border-radius: 22px;
+    height: 223px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    margin: 20px 12px;
+  }
+  .counsil-box-second {
+    background: rgba(57, 131, 187, 0.3137254902);
+    border-radius: 22px;
+    height: 223px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+    margin: 20px 12px;
+  }
+}
+
+.card-Withdrawal {
+  width: 100%;
+  max-width: 25em;
+  background: linear-gradient(135deg, #4a90e2, #50c9c3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  clip-path: polygon(
+    30px 0%,
+    100% 0,
+    100% calc(100% - 30px),
+    calc(100% - 30px) 100%,
+    0 100%,
+    0% 30px
+  );
+  cursor: pointer;
+  margin-bottom: 12px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding: 1em;
+}
+
+.card-Withdrawal:hover {
+  transform: translateY(-10px); /* Moves the card up by 10px */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Adds a shadow for better effect */
+}
+
+.card-Withdrawal .img {
+  width: 3.5em; /* Adjusted size */
+  height: 3.5em;
+  background: white;
+  border-radius: 50%;
+  position: absolute;
+  top: -13px;
+  right: -6px;
+}
+
+.card-Withdrawal span {
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 0.9em; /* Slightly smaller */
+}
+
+.card-Withdrawal .info {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  margin: 1em;
+}
+
+.card-Withdrawal button {
+  padding: 0.5em 1.2em; /* Adjusted button size */
+  display: block;
+  margin: auto;
+  border-radius: 20px;
+  border: none;
+  font-weight: bold;
+  background: #ffffff;
+  color: rgb(0, 0, 0);
+  transition: 0.4s ease-in-out;
+}
+
+.card-Withdrawal button:hover {
+  background: red;
+  color: white;
+  cursor: pointer;
+}
+.card-Withdrawal img {
+  position: relative;
+  top: 17px;
+  right: -4px;
+  width: 83%;
 }
