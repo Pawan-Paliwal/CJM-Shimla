@@ -13486,8 +13486,8 @@ ul.app-icon li {
 }
 
 .about-video img {
-  padding: 8px;
-  border: 1px solid #c7c7c7;
+  padding: 3px;
+  /* border: 1px solid #c7c7c7; */
   height: 431px;
   background: #fff;
 }
@@ -13795,7 +13795,7 @@ header .widget i {
 }
 
 .text-theme-colored2 {
-  color: #ffb151 !important;
+  color: #9e0000 !important;
   font-weight: 600;
 }
 
@@ -16521,7 +16521,6 @@ section.activities {
   background-size: cover; /* Ensures the image covers the entire section */
   background-position: center; /* Centers the image */
   width: 100vw; /* Full width */
-  height: 100vh; /* Full height */
 }
 
 section.activities .double-line-bottom-theme-colored-2 {
@@ -17482,9 +17481,7 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
   .aboutSectionImg2 {
     margin-top: 12px;
     background-image: url("../../../assets/images/established.png");
-    min-height: 155px;
     background-repeat: no-repeat;
-    background-size: contain;
     position: relative;
     right: auto;
     border-radius: 0;
@@ -17895,7 +17892,7 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
   background-image: url(../../../uploads/cjmbuilding.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   height: 207px;
 }
@@ -17903,7 +17900,7 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
   background-image: url(../../../uploads/cjmbuilding.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   background-position: center;
   height: 207px;
 }
@@ -17933,8 +17930,15 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
 
 .inner-main-title .entry-header {
   position: absolute;
+  background-color: rgb(0 0 0 / 40%);
   width: 100%;
   bottom: 7%;
+}
+.inner-main-title .entry-header h1 {
+  padding-left: 18px;
+}
+.inner-main-title .entry-header .breadcrumbs {
+  padding-left: 11px;
 }
 .init-animate {
   visibility: hidden;
@@ -18133,12 +18137,12 @@ section.Blog.direcsec ul.nav.nav-tabs li.nav-item a.nav-link:hover {
   border-radius: 12px;
 }
 
-.rink {
+/* .rink {
   border-style: dashed;
   border-width: 8px 12px 8px 12px;
   border-color: #0b0072;
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-}
+} */
 
 .dot-c {
   display: flex;
@@ -18558,4 +18562,265 @@ ul.wrapperAims li {
   top: 17px;
   right: -4px;
   width: 83%;
+}
+
+/* From Uiverse.io by Artahs */
+.card-Cabinets {
+  position: relative;
+  height: 254px;
+  cursor: pointer;
+  margin-bottom: 12px;
+  background-image: url(https://www.cjmshimla.org/images/cabinet.png);
+  background-repeat: no-repeat;
+  background-position: center; /* Centers the image */
+  background-size: contain; /* Ensures the entire image fits within the container */
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.top-card-Cabinets {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  height: 65%;
+  transition: height 0.3s ease;
+  background: rgba(57, 131, 187, 0.3137254902);
+}
+
+.bottom-card-Cabinets {
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  height: 35%;
+  transition: height 0.3s ease;
+  background-color: #0b0072;
+}
+
+.bottom-card-Cabinets::before {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  bottom: 89px;
+  height: 50px;
+  width: 175px;
+  transition: bottom 0.3s ease;
+  border-bottom-left-radius: 20px;
+  box-shadow: 0 30px 0 0 #0b0072;
+}
+
+.card-Cabinets-content {
+  padding-top: 7%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.card-Cabinets-title {
+  font-weight: 700;
+  font-size: 27px;
+}
+.card-Cabinets-txt {
+  font-size: 14px;
+}
+
+.card-Cabinets-btn {
+  font-size: 13px;
+  margin-top: 7%;
+  text-decoration: none;
+  color: white;
+  background-color: transparent;
+  border: solid 2px #fff;
+  border-radius: 15px;
+  padding: 2%;
+}
+
+.card-Cabinets:hover {
+  box-shadow: 0px 2px 2px #0a3bffa1;
+  border: solid 1px #0b0072;
+}
+
+.card-Cabinets:hover .top-card-Cabinets {
+  height: 35%;
+  transition: height 0.3s ease;
+}
+.card-Cabinets:hover .bottom-card-Cabinets {
+  height: 65%;
+  transition: height 0.3s ease;
+}
+.card-Cabinets:hover .bottom-card-Cabinets::before {
+  bottom: 164px;
+  transition: bottom 0.3s ease;
+}
+
+.card-Cabinets-btn:hover {
+  color: black;
+  background-color: #fff;
+  transition: background-color 0.4s ease;
+}
+
+.fee-table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+}
+
+/* Center the animated text on the image */
+.split-text-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  height: auto;
+  font-size: 6rem; /* Increased font size */
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+  overflow: hidden;
+  background-color: rgb(0 0 0 / 40%);
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+@media screen and (max-width: 800px) {
+  .split-text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 68px;
+    transform: translate(-50%, -50%);
+    display: flex;
+    font-size: 3rem; /* Increased font size */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    overflow: hidden;
+    background-color: rgb(0 0 0 / 40%);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+  }
+  .aboutSectionImg {
+    text-align: center;
+    margin-top: 22px;
+    position: relative;
+  }
+}
+
+/* Background behind text for better visibility */
+.text-background {
+  background: rgba(0, 0, 0, 0.7); /* Black faded background */
+  padding: 20px;
+  border-radius: 10px;
+  display: inline-block;
+}
+
+.text-part {
+  display: inline-block;
+  position: relative;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+.text-part.left {
+  transform: translateX(-200%);
+  animation-name: slide-in-left;
+}
+
+.text-part.right {
+  transform: translateX(200%);
+  animation-name: slide-in-right;
+}
+
+/* Keyframe animations */
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.about-h3 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 22px;
+}
+
+.campus-2-title {
+  background-image: url(../../../uploads/Campus-1.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 207px;
+}
+.campus-3-title {
+  background-image: url(../../../uploads/Campus-3.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 207px;
+}
+.campus-4-title {
+  background-image: url(../../../uploads/Campus-4.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 207px;
+}
+.campus-5-title {
+  background-image: url(../../../uploads/Campus-5.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 207px;
+}
+.campus-6-title {
+  background-image: url(../../../uploads/Campus-6.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 207px;
+}
+.campus-7-title {
+  background-image: url(../../../uploads/Campus-7.png) !important;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 207px;
+}
+
+.left-image {
+  background-image: url(../../../assets/frame6.png);
+  height: 465px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.left-image img {
+  height: 414px;
+}
+
+
+@media screen and (max-width:800px){
+  .left-image {
+    background-image: none;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 }
